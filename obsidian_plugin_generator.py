@@ -357,7 +357,7 @@ def main():
         help="Path to Obsidian vault",
     )
     parser.add_argument(
-        "--ai-service",
+        "--ai",
         choices=["ollama", "groq", "anthropic"],
         default="ollama",
         help="AI service to use",
@@ -374,7 +374,7 @@ def main():
     ascii_text.stylize("bright_magenta", 600, 796)
     console.print(ascii_text)
 
-    ai_service = AIService(args.ai_service, args.model)
+    ai_service = AIService(args.ai, args.model)
 
     plugin_info = {
         "name": args.name,

@@ -28,14 +28,15 @@ python obsidian_plugin_generator.py [plugin_name] [options]
 ### Options
 
 - `--vault-path PATH`: Path to Obsidian vault (default: ~/Documents/ObsidianVault)
-- `--ai-service {ollama,groq}`: AI service to use (default: ollama)
+- `--ai {ollama,groq,anthropic}`: AI service to use (default: ollama)
+- `--name`: Name of the plugin (default: "My Obsidian Plugin")
 
 ### Examples
 
 ```
-python obsidian_plugin_generator.py "My Custom Plugin"
-python obsidian_plugin_generator.py "Task Tracker" --vault-path ~/Obsidian/MyVault
-python obsidian_plugin_generator.py "Code Snippets" --ai-service groq
+python obsidian_plugin_generator.py --name "My Custom Plugin"
+python obsidian_plugin_generator.py --name "Task Tracker" --vault-path ~/Obsidian/MyVault
+python obsidian_plugin_generator.py --name "Code Snippets" --ai groq
 ```
 
 ## Features
